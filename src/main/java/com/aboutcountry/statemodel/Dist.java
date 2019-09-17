@@ -1,13 +1,14 @@
 package com.aboutcountry.statemodel;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Dist {
+	@JsonIgnore
 	private String did;
 	
 	private String dname;
 	
 
-	
-	
 	public String getDid() {
 		return did;
 	}

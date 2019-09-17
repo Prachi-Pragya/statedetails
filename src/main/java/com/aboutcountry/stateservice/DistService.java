@@ -27,8 +27,9 @@ public class DistService {
 			
 			Statement stmt=con.createStatement(); 
 			
+			
 			ResultSet rs=stmt.executeQuery
-					("select Dist.dname, State.sname ,State.sid from Dist\r\n" + 
+					("select Dist.dname, State.sname ,Dist.did from Dist\r\n" + 
 					"join\r\n" + 
 					"state on\r\n" + 
 					"state.sid=Dist.sid\r\n" + 
@@ -38,8 +39,9 @@ public class DistService {
 			{
 				ds= new Dist();
 				
-				//ds.setDid(rs.getInt("did"));
+				ds.setDid(rs.getString("did"));
 				//ds.setSid(rs.getInt("sid"));
+				//ds.setSname(rs.getString("sname"));
 				ds.setDname(rs.getString("dname"));
 				list.add(ds);
 			}

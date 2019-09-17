@@ -2,8 +2,12 @@ package com.aboutcountry.statemodel;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Component
 public class State {
+	
+	@JsonIgnore
 	private int sid;
 	private String sname;
 	
